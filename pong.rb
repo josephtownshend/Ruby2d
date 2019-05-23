@@ -42,9 +42,9 @@ on :key_down do |event|
     @y_speed_left_player = -2
   elsif event.key == 's'
     @y_speed_left_player = 2
-  elsif event.key == 'i'
+  elsif event.key == 'up'
     @y_speed_right_player = -2
-  elsif event.key == 'k'
+  elsif event.key == 'down'
     @y_speed_right_player = 2
   end
 end
@@ -62,5 +62,6 @@ update do
   end
 
 end
+
 
 show
