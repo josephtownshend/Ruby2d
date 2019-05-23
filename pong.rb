@@ -23,5 +23,11 @@ right_player = Rectangle.new(
   z: 0
 )
 
-
+ball = Circle.new(
+  x: (Window.width / 2), y: 15,
+  radius: 10,
+  sectors: 32,
+  color: 'green',
+  z: 10
+)
 show
