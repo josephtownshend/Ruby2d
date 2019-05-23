@@ -28,13 +28,16 @@ net = Rectangle.new(
 
 @y_speed_right_player = 0
 
-ball = Circle.new(
+@ball = Circle.new(
   x: (Window.width / 2), y: 15,
   radius: 10,
   sectors: 32,
   color: 'green',
   z: 10
 )
+
+@x_speed_ball = 0
+@y_speed_ball = 0
 
 
 on :key_down do |event|
@@ -46,12 +49,17 @@ on :key_down do |event|
     @y_speed_right_player = -2
   elsif event.key == 'down'
     @y_speed_right_player = 2
+  elsif event.key == 'space'
+    @x_speed_ball = -2
+    @y_speed_ball = 2
   end
 end
 
 update do
   @left_player.y += @y_speed_left_player
   @right_player.y += @y_speed_right_player
+  @ball.x += @x_speed_ball
+  @ball.y += @y_speed_ball
 
   if @left_player.y < 0 || @left_player.y > Window.height - 80
     @y_speed_left_player = 0
@@ -62,6 +70,7 @@ update do
   end
 
 end
+
 
 
 show
