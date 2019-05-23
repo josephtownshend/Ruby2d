@@ -9,6 +9,19 @@ net = Rectangle.new(
   z: 0
 )
 
+left_player = Rectangle.new(
+  x: 20, y: (Window.height / 2)-40,
+  width: 15, height: 80,
+  color: 'white',
+  z: 0
+)
+
+right_player = Rectangle.new(
+  x: Window.width - 35, y: (Window.height / 2)-40,
+  width: 15, height: 80,
+  color: 'white',
+  z: 0
+)
 
 
 show
