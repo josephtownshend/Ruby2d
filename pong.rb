@@ -9,6 +9,28 @@ net = Rectangle.new(
   z: 0
 )
 
+@left_score = 0
+
+@left_player_score = Text.new(
+  "#{@left_score}",
+  x: (Window.width)-450, y: 20,
+  size: 100,
+  color: 'white',
+)
+
+@right_score = 0
+
+@right_player_score = Text.new(
+  "#{@right_score}",
+  x: (Window.width)-250, y: 20,
+  size: 100,
+  color: 'white',
+)
+
+
+
+
+
 @left_player = Rectangle.new(
   x: 20, y: (Window.height / 2)-40,
   width: 15, height: 80,
